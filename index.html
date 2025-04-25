@@ -3,91 +3,116 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>ماهر - منصة خدمات منزلية</title>
+  <title>تطبيق ماهر</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Tajawal', sans-serif;
+      background-color: #fefdf9;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
       color: #333;
-      line-height: 1.7;
     }
     .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      margin-top: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      direction: rtl;
-    }
-    img {
-      display: block;
-      margin: 0 auto 30px auto;
-      max-width: 200px;
-    }
-    h1, h2 {
-      color: #1e90ff;
       text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    img.logo {
+      width: 160px;
+      margin-bottom: 20px;
+      animation: bounceIn 1s;
+    }
+    h1 {
+      font-size: 28px;
+      color: #000;
+      margin-bottom: 10px;
     }
     p {
-      text-align: center;
+      font-size: 18px;
+      color: #444;
+      max-width: 600px;
+      margin: auto;
     }
-    .contact {
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
       margin-top: 40px;
     }
-    form {
-      margin-top: 20px;
+    .service {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      width: 150px;
+      transition: transform 0.3s;
     }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    .service:hover {
+      transform: translateY(-5px);
     }
-    button {
-      background-color: #1e90ff;
+    .service img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 10px;
+    }
+    .buttons {
+      margin-top: 40px;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
       color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      background-color: #c89d00;
+      transition: background-color 0.3s;
     }
-    button:hover {
-      background-color: #0c7bdc;
+    .buttons a:hover {
+      background-color: #a07f00;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="maher-logo.png" alt="شعار ماهر">
-    <h1>مرحبًا بك في ماهر</h1>
-    <p>ماهر هي منصة ذكية لطلب خدمات الصيانة المنزلية بسهولة وسرعة. نربطك بمزودي خدمة محترفين في السباكة، الكهرباء، المكيفات، النظافة والمزيد.</p>
+    <img src="maher-logo.png" alt="شعار ماهر" class="logo">
+    <h1>مرحبًا بك في تطبيق ماهر</h1>
+    <p>منصة ذكية لطلب خدمات الصيانة المنزلية بسهولة وسرعة. نوصلك بمزودي خدمة محترفين في السباكة، الكهرباء، التكييف، النظافة والمزيد.</p>
 
-    <div class="contact">
-      <h2>تواصل معنا</h2>
-      <p>
-        البريد الإلكتروني: <a href="mailto:support@maher.services">support@maher.services</a><br>
-        الجوال: +966 5xxxxxxxx<br>
-        واتساب: <a href="https://wa.me/9665xxxxxxxx" target="_blank">اضغط هنا</a>
-      </p>
+    <div class="services">
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933811.png" alt="سباكة">
+        <div>سباكة</div>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="كهرباء">
+        <div>كهرباء</div>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/2933/2933826.png" alt="مكيفات">
+        <div>مكيفات</div>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="نظافة">
+        <div>نظافة</div>
+      </div>
+    </div>
 
-      <form>
-        <label>الاسم:</label>
-        <input type="text" placeholder="أدخل اسمك" required>
-
-        <label>البريد الإلكتروني:</label>
-        <input type="email" placeholder="example@email.com" required>
-
-        <label>رسالتك:</label>
-        <textarea rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
-
-        <button type="submit">إرسال</button>
-      </form>
+    <div class="buttons">
+      <a href="https://wa.me/966506019802" target="_blank">راسلنا واتساب</a>
+      <a href="mailto:support@maher.services">راسلنا عبر الإيميل</a>
     </div>
   </div>
 </body>
